@@ -1,0 +1,47 @@
+ <% layout('layout') -%> 
+<div class="col-sm-6 col-sm-offset-3 form-box">
+                        	<div class="form-top">
+                        		<div class="form-top-left">
+                        			<h3>Buy tokkens </h3>
+                            		<p>Fill the your credit card details to buy</p>
+                        		</div>
+                        		<div class="form-top-right">
+                        			<i class="fa fa-money"></i>
+                        		</div>
+                            </div>
+                            <div class="form-bottom">
+			                    <form role="form" action="/token" method="get" class="login-form">
+			                    	<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="meternumber" placeholder="Meter No" class="form-username form-control" id="form-username">
+									</div>
+									<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="amount" placeholder="Amount" class="form-username form-control" id="form-username">
+									</div>
+									<div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="cardnumber" placeholder="Card number" class="form-username form-control" id="form-username">
+                                    </div>
+                                  <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="cvc" placeholder="CVC" class="form-username form-control" id="form-username">
+									</div>
+									 <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="month" placeholder="Expiry month" class="form-username form-control" id="form-username">
+									</div>
+									 <div class="form-group">
+			                    		<label class="sr-only" for="form-username">Username</label>
+			                        	<input type="number" id="year" placeholder="Expiry year" class="form-username form-control" id="form-username">
+									</div>
+                               
+			                        <button type="button" id="submit" class="btn btn-primary">Buy tokken   <i class="fa fa-credit-card "></i></button>
+                                </form>
+                                <div id="err"></div>
+                                                    
+		                    </div>
+						</div>
+			 <script src="assets/js/stripe.js"></script>
+          <script src="assets/js/app2.js"></script>
+        

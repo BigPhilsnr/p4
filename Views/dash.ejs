@@ -1,0 +1,243 @@
+ <link rel="stylesheet" href="assets/bootstrap/css/bt2.css">
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+		
+        <link rel="stylesheet" href="assets/css/style2.css">
+      
+
+<div id="wrapper" data-spy="scroll" data-target="#spy" class="">
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" class="">
+        <nav id="spy">
+            <ul class="sidebar-nav nav">
+                <li class="sidebar-brand active"> <a href="#home" class=""><i class="fa fa-user solo"><%= email%></i></a>
+
+                </li>
+                <li class=""> <a href="#anch1" data-scroll="" class="">
+                            <i class="fa fa-anchor solo">   Anchor 1</i>
+                        </a>
+
+                </li>
+                <li class=""> <a href="#anch2" data-scroll="" class="">
+                            <i class="fa fa-pie-chart solo">   Chart Data</i>
+                        </a>
+
+                </li>
+                <li class=""> <a href="#anch3" data-scroll="" class="">
+                            <i class="fa fa-table solo">   Tabular Data</i>
+                        </a>
+
+                </li>
+                <li class=""> <a href="#anch4" data-scroll="" class="">
+                            <i class="fa fa-bar-chart solo">   Graphs</i>
+                        </a>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Page content -->
+    <div id="page-content-wrapper" class="">
+        <div class="content-header">
+             <h1 id="home" class="">
+                    <a id="menu-toggle" href="#" class="btn btn-menu btn-lg toggle">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </a>
+                    Admin Analysis Panel
+                </h1>
+
+        </div>
+        <div class="page-content inset">
+            <div class="row">
+                <div class="jumbotron text-center">
+                     <h1 class="">Hello Beautiful!</h1>
+
+                    <p class="">This is a sidebar navigation responsive template built off of Bootstrap
+                        3.0 and simple sidebar template. It includes anchors, scroll spy, smooth
+                        scroll, and Awesome icon fonts.</p>
+                    <p class=""><a class="btn btn-default">Click On Me!</a>
+ <a class="btn btn-info">Tweet Me!</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 well">
+                    <legend id="anch1" class="">Anchor 1</legend>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies,
+                        metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque
+                       
+                        Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu
+                        tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt
+                        nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                    
+                </div>
+                <div class="col-md-12 well">
+                    <legend id="anch2" class="">Tokken purchase charts</legend>
+                    <canvas id="mycanvas" width="256" height="256"></canvas>
+                        
+                              <canvas id="mycanvas1" width="256" height="256"></canvas>
+                              <canvas id="mycanvas2" width="256" height="256"></canvas>
+                </div>
+                <div class="col-md-12 well">
+                    <legend id="anch3" class="">Anchor 3</legend>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies,
+                        metus eget fringilla fermentum, sem justo pulvinar tellus, ac varius neque
+                      
+                        Sed tortor turpis, mollis et tempus eu, auctor laoreet neque. Etiam eu
+                        tortor rutrum, rutrum mauris sit amet, hendrerit augue. Sed ut tincidunt
+                        nisi. Nam consectetur velit ac pharetra venenatis.</p>
+                   
+                </div>
+                <div class="col-md-12 well">
+                    <legend id="anch4" class="">Graphical Representation</legend>
+                   <div><canvas id="myChart" ></canvas></div>
+                </div>
+            </div>
+           
+            </a>
+        </div><a href="#" target="_blank" class="">
+
+        </a>
+    </div><a href="#" target="_blank" class="">
+
+    </a>
+</div>
+<script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+         <script src="assets/js/script2.js"></script>
+        <script src="assets/js/chartq.js"></script>
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [1, 2, 3, 4, 5, 6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],
+        datasets: [{
+            label: '<%= name %>',
+            data: [<%= name %>],
+            backgroundColor: [
+                'rgba(25, 195, 23, 0.2)'
+                
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)'
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+
+		<script src="jquery-2.1.4.min.js"></script>
+		<script src="Chart.js"></script>
+	
+		<script>
+			$(document).ready(function(){
+                var ctx = $("#mycanvas").get(0).getContext("2d");
+               
+
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 270,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Corn Flower Blue"
+					},
+					{
+						value: 50,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Lightgreen"
+					},
+					{
+						value: 40,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Orange"
+					}
+				];
+
+				//draw
+                var piechart = new Chart(ctx).Pie(data);
+              
+			});
+		</script>
+	<script>
+			$(document).ready(function(){
+               
+                var ctx1 = $("#mycanvas1").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 270,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Corn Flower Blue"
+					},
+					{
+						value: 50,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Lightgreen"
+					},
+					{
+						value: 40,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Orange"
+					}
+				];
+
+				//draw
+               
+                var piechart = new Chart(ctx1).Pie(data);
+			});
+</script>
+<script>
+			$(document).ready(function(){
+               
+                var ctx2 = $("#mycanvas2").get(0).getContext("2d");
+
+				//pie chart data
+				//sum of values = 360
+				var data = [
+					{
+						value: 270,
+						color: "cornflowerblue",
+						highlight: "lightskyblue",
+						label: "Corn Flower Blue"
+					},
+					{
+						value: 50,
+						color: "lightgreen",
+						highlight: "yellowgreen",
+						label: "Lightgreen"
+					},
+					{
+						value: 40,
+						color: "orange",
+						highlight: "darkorange",
+						label: "Orange"
+					}
+				];
+
+				//draw
+               
+                var piechart = new Chart(ctx2).Pie(data);
+			});
+		</script>
